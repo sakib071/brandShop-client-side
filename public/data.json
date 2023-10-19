@@ -1,0 +1,218 @@
+[
+    {
+        "image": "https://i.ibb.co/BfSkbRm/download-1.jpg",
+        "name": "Gaming Laptop",
+        "brandName": "Acer",
+        "type": "computer",
+        "price": 999.99,
+        "description": "Powerful gaming laptop for immersive gaming experiences.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://i.ibb.co/HFXDJxd/download-3.jpg",
+        "name": "Wireless Headphones",
+        "brandName": "Sony",
+        "type": "headphones",
+        "price": 149.99,
+        "description": "High-quality wireless headphones for music enthusiasts.",
+        "rating": 4.2
+    },
+    {
+        "image": "https://example.com/image3.jpg",
+        "name": "Smart Microwave Oven",
+        "brandName": "Samsung",
+        "type": "microwave",
+        "price": 199.99,
+        "description": "Smart microwave oven with voice control and advanced features.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://i.ibb.co/tZTFnRj/giant-31567.jpg",
+        "name": "Desktop PC",
+        "brandName": "Dell",
+        "type": "computer",
+        "price": 799.99,
+        "description": "Powerful desktop PC for work and play.",
+        "rating": 4.3
+    },
+    {
+        "image": "https://i.ibb.co/wKCytcv/images-1.jpg",
+        "name": "Noise-Canceling Headphones",
+        "brandName": "Bose",
+        "type": "headphones",
+        "price": 249.99,
+        "description": "Premium noise-canceling headphones for an exceptional audio experience.",
+        "rating": 4.8
+    },
+    {
+        "image": "https://i.ibb.co/x2tfBYJ/best-small-microwave-panel-scaled-jpg-optimal.jpg",
+        "name": "Countertop Microwave",
+        "brandName": "Panasonic",
+        "type": "microwave",
+        "price": 129.99,
+        "description": "Compact countertop microwave with multiple cooking presets.",
+        "rating": 4.4
+    },
+    {
+        "image": "https://i.ibb.co/9Gmwk2w/business-laptop.jpg",
+        "name": "Ultrabook",
+        "brandName": "Lenovo",
+        "type": "computer",
+        "price": 899.99,
+        "description": "Sleek and lightweight ultrabook for professionals on the go.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://i.ibb.co/XVHwrsT/image.png",
+        "name": "Samsung Galaxy S22",
+        "brandName": "Samsung",
+        "type": "Mobile",
+        "price": 179.99,
+        "description": "Flagship smartphone.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://example.com/image9.jpg",
+        "name": "Microwave with Grill",
+        "brandName": "LG",
+        "type": "microwave",
+        "price": 179.99,
+        "description": "Microwave with grill function for versatile cooking.",
+        "rating": 4.2
+    },
+    {
+        "image": "https://i.ibb.co/dftW41z/61wi86i8-CZL-AC-UF1000-1000-QL80.jpg",
+        "name": "Gaming Desktop",
+        "brandName": "Alienware",
+        "type": "computer",
+        "price": 1499.99,
+        "description": "High-performance gaming desktop for competitive gamers.",
+        "rating": 4.9
+    },
+    {
+        "image": "https://example.com/image11.jpg",
+        "name": "Bluetooth Earbuds",
+        "brandName": "Apple",
+        "type": "headphones",
+        "price": 199.99,
+        "description": "Wireless Bluetooth earbuds for seamless audio playback.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://i.ibb.co/7CbbBh0/grill-microwave-oven.jpg",
+        "name": "Compact Microwave",
+        "brandName": "Whirlpool",
+        "type": "microwave",
+        "price": 119.99,
+        "description": "Compact microwave with simple and convenient features.",
+        "rating": 4.3
+    },
+    {
+        "image": "https://example.com/image13.jpg",
+        "name": "Business Laptop",
+        "brandName": "HP",
+        "type": "computer",
+        "price": 749.99,
+        "description": "Reliable business laptop with enhanced security features.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://i.ibb.co/9GQbX8B/wireless-headphone-display-in-the-store-royalty-free-image-1678138342.jpg",
+        "name": "Wireless Noise-Canceling Headphones",
+        "brandName": "JBL",
+        "type": "headphones",
+        "price": 229.99,
+        "description": "Wireless headphones with active noise-canceling technology.",
+        "rating": 4.8
+    },
+    {
+        "image": "https://i.ibb.co/0rcsrV8/images.jpgg",
+        "name": "Built-In Microwave",
+        "brandName": "GE Appliances",
+        "type": "Samsung",
+        "price": 159.99,
+        "description": "Built-in microwave for seamless kitchen integration.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://i.ibb.co/9GzbnF8/download-2.jpg",
+        "name": "Gaming Monitor",
+        "brandName": "ASUS",
+        "type": "computer",
+        "price": 349.99,
+        "description": "High-refresh-rate gaming monitor for competitive gaming.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://example.com/image17.jpg",
+        "name": "Wireless In-Ear Headphones",
+        "brandName": "Beats by Dre",
+        "type": "headphones",
+        "price": 189.99,
+        "description": "Wireless in-ear headphones with premium sound quality.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://i.ibb.co/c6V3h9m/download-4.jpg",
+        "name": "Convection Microwave Oven",
+        "brandName": "Sharp",
+        "type": "Samsung",
+        "price": 169.99,
+        "description": "Convection microwave oven with baking capabilities.",
+        "rating": 4.4
+    },
+    {
+        "image": "https://example.com/image19.jpg",
+        "name": "Laptop for Students",
+        "brandName": "Acer",
+        "type": "computer",
+        "price": 649.99,
+        "description": "Affordable laptop with features tailored for students.",
+        "rating": 4.3
+    },
+    {
+        "image": "https://example.com/image20.jpg",
+        "name": "Sports Earbuds",
+        "brandName": "Bose",
+        "type": "headphones",
+        "price": 129.99,
+        "description": "Wireless sports earbuds designed for active lifestyles.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://example.com/image21.jpg",
+        "name": "Ultrawide Gaming Monitor",
+        "brandName": "LG",
+        "type": "computer",
+        "price": 599.99,
+        "description": "Immersive ultrawide gaming monitor for enhanced gameplay.",
+        "rating": 4.8
+    },
+    {
+        "image": "https://example.com/image22.jpg",
+        "name": "Wireless Keyboard and Mouse Combo",
+        "brandName": "Logitech",
+        "type": "computer",
+        "price": 79.99,
+        "description": "Wireless keyboard and mouse combo for seamless productivity.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://example.com/image23.jpg",
+        "name": "Wireless Smart Speaker",
+        "brandName": "Amazon Echo",
+        "type": "headphones",
+        "price": 149.99,
+        "description": "Smart speaker with voice assistant for a connected home.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://example.com/image24.jpg",
+        "name": "Compact Microwave Oven",
+        "brandName": "Hamilton Beach",
+        "type": "microwave",
+        "price": 109.99,
+        "description": "Compact microwave oven with easy-to-use controls.",
+        "rating": 4.2
+    }
+]

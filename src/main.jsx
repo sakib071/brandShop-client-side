@@ -8,21 +8,36 @@ import {
 } from "react-router-dom";
 import AddProduct from './AddProduct.jsx';
 import MyCart from './MyCart.jsx';
+import UpdateProduct from './UpdateProduct.jsx';
+import Products from './Products.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    loader: () => fetch('brandData.json')
   },
   {
-    path: "/addProduct",
-    element: <AddProduct></AddProduct>
+    path: "addProduct",
+    element: <Products></Products>,
+    loader: () => fetch('http://localhost:5000/product')
+
   },
   {
-    path: "/myCart",
+    path: "addProduct",
+    element: <AddProduct></AddProduct>,
+  },
+  {
+    path: "myCart",
     element: <MyCart></MyCart>
+  },
+  {
+    path: "updateProduct/:id",
+    element: <UpdateProduct></UpdateProduct>,
+    loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
   }
+
 ]);
 
 

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/pdMwMm3/image.png",
+        "brandName": "MSI"
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/gZR1sHS/image.png",
+        "brandName": "Apple"
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/V3ynkXd/image.png",
+        "brandName": "Acer"
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/9N11gDw/image.png",
+        "brandName": "Samsung"
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/bHM7Q52/image.png",
+        "brandName": "Sony"
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/9sNcZsL/image.png",
+        "brandName": "Gigabyte"
+    }
+]

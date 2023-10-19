@@ -1,5 +1,11 @@
+import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 const AddProduct = () => {
+
+    const products = useLoaderData();
+
+    console.log(products);
     const handleAddProduct = event => {
         event.preventDefault();
 
@@ -25,6 +31,12 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Product added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
             })
 
     }
@@ -40,8 +52,8 @@ const AddProduct = () => {
                     </div>
                     <div className="flex gap-5 justify-center">
                         <input type="text" name="type" placeholder="Type" className="input input-bordered w-full max-w-sm" />
-                        <input type="number" name="price" placeholder="Price" className="input input-bordered w-full max-w-sm" />
-                        <input type="number" name="rating" placeholder="Rating" className="input input-bordered w-full max-w-sm" />
+                        <input type="text" name="price" placeholder="Price" className="input input-bordered w-full max-w-sm" />
+                        <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-full max-w-sm" />
                     </div>
                     <div className="flex flex-col gap-5 justify-center">
                         <input type="text" name="imageURL" placeholder="Image URL" className="input input-bordered w-full" />
