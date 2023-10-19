@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Swal from "sweetalert2";
 
 const ProductCard = ({ product }) => {
@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="card card-side bg-base-100 h-[30vh] w-[30vw] mx-auto shadow-xl">
-            <figure className=""><img src={imageURL} alt="" /></figure>
+            <figure className="ml-10"><img src={imageURL} alt="" /></figure>
             <div className="card-body justify-center text-left flex flex-row items-center gap-3">
                 <div className="space-y-2">
                     <h2 className="text-xl font-bold">{name}</h2>
@@ -54,11 +54,13 @@ const ProductCard = ({ product }) => {
 
                 <div className="card-actions">
                     <div className="flex flex-col space-y-3">
-                        <button className="btn btn-sm">Details</button>
-                        <Link to={`updateProduct/${_id}`}>
-                            <button className="btn w-full btn-sm">Edit</button>
+                        <Link to={`/product/details/${_id}`}>
+                            <button className="btn btn-sm">Details</button>
                         </Link>
-                        <button onClick={() => handleDelete(_id)} className="btn bg-red-600 text-white btn-sm">Delete</button>
+                        <a href={`http://localhost:5173/product/updateProduct/${_id}`}>
+                            <button className="btn w-full btn-sm">Edit</button>
+                        </a>
+                        <button onClick={() => handleDelete(_id)} className="btn bg-red-600 text-white btn-sm hover:text-black">Delete</button>
                     </div>
                 </div>
             </div>

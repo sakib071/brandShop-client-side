@@ -4,7 +4,13 @@ import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => console.log('user logged out successfully'))
+            .catch(error => console.error(error))
+    }
 
     const navLinks = <>
         <div className="flex text-md font-semibold space-x-6">
@@ -53,8 +59,6 @@ const Navbar = () => {
                 }>Login
                 </NavLink>
             </li>}
-
-
         </div>
 
     </>
@@ -89,9 +93,8 @@ const Navbar = () => {
                                 <img src={user?.photoURL} />
                             </div>
                         </div></NavLink>
-
+                        <a onClick={handleLogOut} className="btn btn-sm bg-red-600 text-white">Sign out</a>
                     </>
-
                 }
             </div>
         </div>

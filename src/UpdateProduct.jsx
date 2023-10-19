@@ -1,23 +1,9 @@
-// import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
-    // const id = useParams();
-    // console.log('Update id:', id);
 
-    // const [myProduct, setMyProduct] = useState(null);
-    // const [allProduct, setAllProduct] = useState(null);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/product')
-    //         .then(res => res.json())
-    //         .then(data => setAllProduct(data))
-    // }, [])
-    // const record = allProduct.find(item => item._id == id)
-    // console.log(record);
     const product = useLoaderData();
-    // console.log("My product", product);
     const { _id, name, brandName, type, price, rating, imageURL, description } = product;
 
     const handleUpdateProduct = event => {
@@ -32,9 +18,7 @@ const UpdateProduct = () => {
         const imageURL = form.imageURL?.value;
         const description = form.description?.value;
         const updatedProduct = { name, brandName, type, price, rating, imageURL, description }
-        // console.log(updatedProduct);
 
-        //send data to server
         fetch(`http://localhost:5000/product/${_id}`, {
             method: 'PUT',
             headers: {
@@ -58,7 +42,7 @@ const UpdateProduct = () => {
 
     return (
         <div>
-            <h2 className="text-3xl font-bold mb-10 mt-24">Update Product: {name}</h2>
+            <h2 className="text-3xl font-bold mb-10 mt-24 text-center">Update Product: {name}</h2>
             <form onSubmit={handleUpdateProduct} className="bg-base-100 w-fit mx-auto shadow-md p-10 rounded-lg">
                 <div className="form-control space-y-5">
                     <div className="flex gap-5 justify-center">
