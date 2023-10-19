@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
     }
 
     return (
-        <div className="card card-side bg-base-100 h-[30vh] w-[30vw] shadow-xl">
+        <div className="card card-side bg-base-100 h-[30vh] w-[30vw] mx-auto shadow-xl">
             <figure className=""><img src={imageURL} alt="" /></figure>
             <div className="card-body justify-center text-left flex flex-row items-center gap-3">
                 <div className="space-y-2">
@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
 
                 <div className="card-actions">
                     <div className="flex flex-col space-y-3">
-                        <button className="btn btn-sm">View</button>
+                        <button className="btn btn-sm">Details</button>
                         <Link to={`updateProduct/${_id}`}>
                             <button className="btn w-full btn-sm">Edit</button>
                         </Link>

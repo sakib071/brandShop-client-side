@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import BrandCards from "./BrandCards";
 import Specialty from "./Specialty";
+import Review from "./Review";
 
 const Home = () => {
 
@@ -26,7 +27,7 @@ const Home = () => {
                 <a href="#item3" className="btn btn-xs">3</a>
             </div>
             <div className='container flex flex-col items-center mt-32 mx-auto'>
-                <h1 className='text-3xl font-bold'> WE Have <span className="text-blue-600">0{products.length}</span> Brands Available</h1>
+                <h1 className='text-3xl font-bold'> We Have <span className="text-blue-600">0{products.length}</span> Brands Available</h1>
                 <div className='grid md:grid-cols-3 gap-5'>
                     {
                         products.map(product => <BrandCards key={product.id} product={product}></BrandCards>)
@@ -34,6 +35,7 @@ const Home = () => {
                 </div>
             </div>
             <Specialty></Specialty>
+            <Review></Review>
         </div>
 
 

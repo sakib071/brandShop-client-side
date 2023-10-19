@@ -9,10 +9,13 @@ const ProductsByBrand = () => {
         // Fetch products by brandName
         fetch(`http://localhost:5000/product?brandName=${brandName}`)
             .then((response) => response.json())
-            .then((data) => setProducts(data));
+            .then((data) => setProducts(data.filter(product => product.brandName == brandName)));
     }, [brandName]);
 
+    console.log(products);
+
     return (
+
         <div className="mt-20 p-10">
             <h2 className="text-3xl font-bold text-center mb-5">Products by <span className="text-blue-700 uppercase">{brandName}</span></h2>
             <div className="max-w-7xl mx-auto grid grid-cols-3 gap-5">

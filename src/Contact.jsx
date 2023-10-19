@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Contact = () => {
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-100">
                 <div className="hero-content bg-base-100 shadow-md rounded-lg">
                     <div className="text-left p-5 space-y-5 max-w-md">
                         <h1 className="text-3xl font-bold">Contact With Us</h1>

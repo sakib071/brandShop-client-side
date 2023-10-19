@@ -18,13 +18,13 @@ import Register from './Register';
 import Login from './Login';
 import ProductsByBrand from './ProductsByBrand';
 import PrivateRoute from './PrivateRoute';
+import ErrorPage from './ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // loader: () => fetch('/brandData.json'),
     children: [
       {
         path: "/",
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <Products></Products>,
-        loader: () => fetch('http://localhost:5000/product')
+        loader: () => fetch('http://localhost:5000/product'),
       },
       {
         path: "/addProduct",
@@ -61,9 +61,13 @@ const router = createBrowserRouter([
         element: <ProductsByBrand></ProductsByBrand>,
       },
       {
-        path: "/updateProduct/:id",
+        path: "product/updateProduct/:id",
         element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+      },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>
       }
     ]
   }
