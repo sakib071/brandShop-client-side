@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const BrandCards = ({ product }) => {
     const { brandName, image } = product;
 
     return (
         <div>
-            <div className="card card-compact w-96 h-full bg-base-100 shadow-xl">
-                <figure><img src={image} alt="" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{brandName}</h2>
+            <Link to={`brands/${brandName}`}>
+                <div className="card card-compact w-96 h-full bg-base-100 hover:shadow-xl transition-all ease-in-out">
+                    <figure className='flex-grow p-5'><img src={image} alt="" /></figure>
+                    <div className="card-body">
+                        <h2 className="card-title p-1 flex-grow absolute bottom-5 left-5">{brandName}</h2>
+                    </div>
                 </div>
-            </div>
+            </Link>
+
         </div>
     );
 };

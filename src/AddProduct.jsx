@@ -40,14 +40,12 @@ const AddProduct = () => {
                         confirmButtonText: 'Cool'
                     })
                 }
-
             })
-
     }
 
     return (
         <div>
-            <h2 className="text-3xl font-bold mb-10 mt-24">Add Product</h2>
+            <h2 className="text-3xl font-bold mb-5 mt-48 text-center">Add Product</h2>
             <form onSubmit={handleAddProduct} className="bg-base-100 w-fit mx-auto shadow-md p-10 rounded-lg">
                 <div className="form-control space-y-5">
                     <div className="flex gap-5 justify-center">

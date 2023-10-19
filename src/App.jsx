@@ -1,4 +1,4 @@
-import { Outlet, useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import './App.css'
 // import BrandCards from './BrandCards';
 
@@ -16,7 +16,6 @@ function App() {
         }
       </div> */}
 
-      <Outlet></Outlet>
     </div>
   )
 }

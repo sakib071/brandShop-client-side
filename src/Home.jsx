@@ -7,14 +7,18 @@ const Home = () => {
     console.log(products);
 
     return (
-        <div className='container flex flex-col items-center'>
-            <h1 className='text-3xl font-bold'> All Brands {products.length} </h1>
-            <div className='grid md:grid-cols-3 gap-5'>
-                {
-                    products.map(product => <BrandCards key={product.id} product={product}></BrandCards>)
-                }
+        <div>
+            <div className='container flex flex-col items-center mt-44 mx-auto'>
+                <h1 className='text-3xl font-bold'> WE Have <span className="text-blue-600">0{products.length}</span> Brands Available</h1>
+                <div className='grid md:grid-cols-3 gap-5 mb-24'>
+                    {
+                        products.map(product => <BrandCards key={product.id} product={product}></BrandCards>)
+                    }
+                </div>
             </div>
         </div>
+
+
     );
 };
 
