@@ -43,13 +43,6 @@ const ProductDetails = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* <h3>{product.name}</h3>
-                        <p>Brand: {product.brandName}</p>
-                        <p>Type: {product.type}</p>
-                        <p>Price: ${product.price}</p>
-                        <p>Rating: {product.rating}</p>
-                        <img src={product.imageURL} alt={product.name} /> */}
                     </div>
                 ) : (
                     <p>Loading product details...</p>
