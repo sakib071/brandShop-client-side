@@ -1,7 +1,7 @@
 # Tech Web App using REACT + Vite
 ## Features
 
-**Three features of my project given below.**
+**Features of my project given below.**
 - User-Friendly Product Management: Create, update, and delete products effortlessly with our user-friendly product management system.
 - Secure Authentication Methods: Ensure your data is protected with options for both Google and Email/Password sign-in methods.
 - Private Routes: Implement private routes to restrict access to certain parts of your site, ensuring user privacy and security.
