@@ -6,6 +6,7 @@ const AddProduct = () => {
     const products = useLoaderData();
 
     console.log(products);
+
     const handleAddProduct = event => {
         event.preventDefault();
 
@@ -31,12 +32,15 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Product added successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
+                if (data.insertedId > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+
             })
 
     }

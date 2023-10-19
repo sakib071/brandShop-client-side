@@ -29,7 +29,6 @@ const ProductCard = ({ product }) => {
                                 'Your Product has been deleted.',
                                 'success'
                             )
-
                         }
                     })
             }
