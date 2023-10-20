@@ -12,7 +12,7 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [photo, setPhoto] = useState('');
-    const [success, setSuccess] = useState('');
+    // const [success, setSuccess] = useState('');
     const [registerError, setRegisterError] = useState('');
     const auth = getAuth();
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Register = () => {
         console.log(name, email, password);
 
         setRegisterError('');
-        setSuccess('');
+        // setSuccess('');
 
         if (password.length < 6) {
             toast.error('Password should be at least 6 characters or longer');
@@ -47,11 +47,24 @@ const Register = () => {
             .then(result => {
                 handleUpdateProfile(name, photo)
                 console.log(result.user);
-                toast.success('User created successfully');
                 setName('');
                 setEmail('');
                 setPassword('');
                 navigate('/');
+                toast.success('User created successfully');
+                const user = { email };
+                fetch('http://localhost:5000/user', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(res => res.json()
+                        .then(data => {
+                            console.log(data);
+                            toast.success('User created successfully');
+                        }))
             })
             .catch(error => {
                 console.error(error);
@@ -120,9 +133,6 @@ const Register = () => {
                             </div>
                             {
                                 registerError && <p className="text-red-700">{registerError}</p>
-                            }
-                            {
-                                success && <p className="text-green-600">{success}</p>
                             }
                         </form>
 
