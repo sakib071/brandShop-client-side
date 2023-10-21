@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <Products></Products>,
-        loader: () => fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product'),
+        loader: () => fetch('https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/product'),
       },
       {
         path: "/addProduct",
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/cart'),
+        loader: () => fetch('https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/cart'),
 
       },
       {
@@ -66,12 +66,12 @@ const router = createBrowserRouter([
       {
         path: "product/updateProduct/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/product/${params.id}`)
       },
       {
         path: "product/details/:id",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: () => fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product'),
+        loader: () => fetch('https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/product'),
       },
       {
         path: "*",

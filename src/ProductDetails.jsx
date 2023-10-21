@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/product/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 setProduct(data);
@@ -37,7 +37,7 @@ const ProductDetails = () => {
         console.log("new cart", myCart);
 
         //send data to server
-        fetch('http://localhost:5000/cart', {
+        fetch('https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

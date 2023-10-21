@@ -7,7 +7,7 @@ const ProductsByBrand = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product?brandName=${brandName}`)
+        fetch(`https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/product?brandName=${brandName}`)
             .then((response) => response.json())
             .then((data) => setProducts(data.filter(product => product.brandName == brandName)));
     }, [brandName]);

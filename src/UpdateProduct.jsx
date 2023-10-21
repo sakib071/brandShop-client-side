@@ -19,7 +19,7 @@ const UpdateProduct = () => {
         const description = form.description?.value;
         const updatedProduct = { name, brandName, type, price, rating, imageURL, description }
 
-        fetch(`https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product/${_id}`, {
+        fetch(`https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

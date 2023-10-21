@@ -21,8 +21,7 @@ const AddProduct = () => {
         const newProduct = { name, brandName, type, price, rating, imageURL, description }
         console.log(newProduct);
 
-        //send data to server
-        fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product', {
+        fetch('https://technology-electronics-server-with-auth-q8ov57eni.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -31,7 +30,6 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.insertedId > 0) {
                     Swal.fire({
                         title: 'Success!',
