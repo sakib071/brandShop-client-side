@@ -1,24 +1,63 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+// import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
+import { AuthContext } from './AuthProvider';
 
 const ProductDetails = () => {
-    const { id } = useParams(); // Get the product ID from the route
+    const { id } = useParams();
+    const { user } = useContext(AuthContext);
+    console.log("My cart", id);
     const [product, setProduct] = useState(null);
 
-    // Fetch the product details based on the ID
     useEffect(() => {
-        // Make an API request to retrieve product details
         fetch(`http://localhost:5000/product/${id}`)
             .then((response) => response.json())
             .then((data) => {
-                setProduct(data); // Update the product state with the retrieved data
+                setProduct(data);
             })
             .catch((error) => {
                 console.error('Error fetching product details: ', error);
             });
     }, [id]);
 
-    // Render the product details once data is available
+    const addProductToCart = () => {
+
+        // event.preventDefault();
+
+        const currentUserEmail = user?.email;
+        const name = product?.name;
+        const brandName = product?.brandName;
+        const type = product?.type;
+        const price = product?.price;
+        const rating = product?.rating;
+        const imageURL = product?.imageURL;
+        const description = product?.description;
+        const myCart = { currentUserEmail, name, brandName, type, price, rating, imageURL, description }
+        console.log("new cart", myCart);
+
+        //send data to server
+        fetch('http://localhost:5000/cart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(myCart)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+    }
+
     return (
         <div>
             <h2>Product Details</h2>
@@ -27,20 +66,22 @@ const ProductDetails = () => {
                     <div>
                         <div className="card w-[40vw] mx-auto mt-20 bg-base-100 shadow-xl">
                             <p className='text-3xl font-bold text-center mb-3'>Product Details</p>
-                            <figure><img src={product.imageURL} alt="Shoes" /></figure>
+                            <figure><img src={product?.imageURL} alt="Shoes" /></figure>
                             <div className=" p-10 space-y-3">
-                                <h2 className="card-title text-3xl font-bold">{product.name}</h2>
-                                <p className='text-xl'>{product.description}</p>
+                                <h2 className="card-title text-3xl font-bold">{product?.name}</h2>
+                                <p className='text-xl'>{product?.description}</p>
                                 <div className='flex px-1 justify-between'>
-                                    <p className='text-xl font-bold'>Brand: {product.brandName}</p>
-                                    <p className='text-xl font-bold'>Price: ${product.price}</p>
-                                    <p className='text-xl font-bold'>Rating: {product.rating}</p>
+                                    <p className='text-xl font-bold'>Brand: {product?.brandName}</p>
+                                    <p className='text-xl font-bold'>Price: ${product?.price}</p>
+                                    <p className='text-xl font-bold'>Rating: {product?.rating}</p>
                                 </div>
 
+                                <Link to={`/product/details/${id}`}>
+                                    <div className="card-actions justify-end">
+                                        <button onClick={() => addProductToCart(product)} className="btn btn-neutral">Add to Cart</button>
+                                    </div>
+                                </Link>
 
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-neutral">Add to Cart</button>
-                                </div>
                             </div>
                         </div>
                     </div>

@@ -53,7 +53,7 @@ const Register = () => {
                 navigate('/');
                 toast.success('User created successfully');
                 const user = { email };
-                fetch('http://localhost:5000/user', {
+                fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

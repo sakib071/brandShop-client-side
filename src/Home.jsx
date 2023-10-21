@@ -10,9 +10,7 @@ const Home = () => {
     const toggleTheme = () => {
         setDarkMode(!darkMode);
     };
-
     const products = useLoaderData();
-    console.log(products);
 
     return (
         <div className={`min-h-screen pb-16 ${darkMode ? 'dark:bg-gray-900 dark:text-white' : 'bg-white text-black'}`}>

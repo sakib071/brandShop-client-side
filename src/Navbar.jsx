@@ -1,32 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    const [userData, setUserData] = useState(null);
 
-    useEffect(() => {
-        if (user) {
-            const auth = getAuth();
-            const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-                if (currentUser) {
-                    setUserData({
-                        displayName: currentUser.displayName,
-                        photoURL: currentUser.photoURL,
-                    });
-                } else {
-                    setUserData(null);
-                }
-            });
-
-            return () => {
-                unsubscribe();
-            };
-        }
-    }, [user]);
     const handleLogOut = () => {
         logOut()
             .then(() => console.log('user logged out successfully'))
@@ -109,9 +88,9 @@ const Navbar = () => {
                 {
                     user && <>
                         <NavLink to="/profile"> <div className="avatar items-center">
-                            <button className="btn-sm text-lg font-bold">{userData?.displayName}</button>
+                            <button className="btn-sm text-lg font-bold">{user?.displayName}</button>
                             <div className="w-10 rounded-full">
-                                <img src={userData?.photoURL} />
+                                <img src={user?.photoURL} />
                             </div>
                         </div></NavLink>
                         <a onClick={handleLogOut} className="btn btn-sm bg-red-600 text-white">Sign out</a>

@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <Products></Products>,
-        loader: () => fetch('http://localhost:5000/product'),
+        loader: () => fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product'),
       },
       {
         path: "/addProduct",
@@ -43,7 +43,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+        loader: () => fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/cart'),
+
       },
       {
         path: "/contact",
@@ -64,11 +66,12 @@ const router = createBrowserRouter([
       {
         path: "product/updateProduct/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product/${params.id}`)
       },
       {
         path: "product/details/:id",
-        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+        loader: () => fetch('https://technology-electronics-server-with-auth-hnovuqxi3.vercel.app/product'),
       },
       {
         path: "*",
